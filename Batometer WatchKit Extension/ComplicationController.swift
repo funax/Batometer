@@ -12,7 +12,7 @@ import SwiftUI
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
-    @ObservedObject var sensor = SensorManager()
+    @ObservedObject var sensor = SensorManager.shared
     
     func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
         handler([.forward, .backward])
@@ -30,13 +30,12 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         handler(.showOnLockScreen)
     }
     
-    // MARK: - Timeline Population
-    
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
 
         // https://qiita.com/MilanistaDev/items/6a09bb787d9eee509c0d
         switch complication.family {
         case .modularLarge:
+            print("Getting TL")
             let t = CLKComplicationTemplateModularLargeStandardBody()
             let text1 = CLKSimpleTextProvider(text: "気圧")
             let text2 = CLKSimpleTextProvider(text: sensor.pressureString)
@@ -46,26 +45,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             t.body2TextProvider = text3
             let entry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: t)
             handler(entry)
-            
-        case .graphicRectangular:
-            // headerImageProvider(nil可), headerTextProvider, body1TextProvider,  gaugeProviderが必要
-            let rectangularTemplate = CLKComplicationTemplateGraphicRectangularTextGauge()
 
-            let headerText = CLKSimpleTextProvider(text: "テスト")
-            headerText.tintColor = UIColor(red: 116.0/255.0, green: 192.0/255.0, blue: 58.0/255.0, alpha: 1.0)
-            rectangularTemplate.headerTextProvider = headerText
-
-            let bodyText = CLKSimpleTextProvider(text: "残タスク：1")
-            bodyText.tintColor = .white
-            rectangularTemplate.body1TextProvider = bodyText
-
-            let gaugeColor = UIColor(red: 116.0/255.0, green: 192.0/255.0, blue: 58.0/255.0, alpha: 1.0)
-            let gaugeProvider =
-                CLKSimpleGaugeProvider(style: .fill, gaugeColor: gaugeColor, fillFraction: 0.5)
-            rectangularTemplate.gaugeProvider = gaugeProvider
-            // 用意したTemplateをセット
-            let entry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: rectangularTemplate)
-            handler(entry)
         default:
             handler(nil)
         }

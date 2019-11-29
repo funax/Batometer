@@ -30,8 +30,8 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             switch task {
             case let backgroundTask as WKApplicationRefreshBackgroundTask:
                 // Be sure to complete the background task once you’re done.
-                print("refresh called")
-                let sensor = SensorManager()
+                print("WKRefresh called")
+                let sensor = SensorManager.shared
                 sensor.startUpdate()
                 backgroundTask.setTaskCompletedWithSnapshot(false)
             case let snapshotTask as WKSnapshotRefreshBackgroundTask:

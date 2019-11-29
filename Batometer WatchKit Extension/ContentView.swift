@@ -8,14 +8,14 @@ import Combine
 import CoreMotion
 
 struct ContentView: View {
-    @ObservedObject var sensor = SensorManager()
+    @ObservedObject var sensor = SensorManager.shared
     let availabe = CMAltimeter.isRelativeAltitudeAvailable()
 
     var body: some View {
         VStack {
             Text(availabe ? sensor.pressureString : "reading...")
             Text(availabe ? sensor.timestampString : "reading...")
-            Button(action: { self.sensor.doRestart() }) {
+            Button(action: { self.sensor.restart() }) {
                 Text("Restart")
             }.frame(width: CGFloat(80.0), height: CGFloat(28.0))
         }
