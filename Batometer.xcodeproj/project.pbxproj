@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C21D040723897E7200B365BF /* Batometer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C21D040623897E7200B365BF /* Batometer WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C21D040D23897E7200B365BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C21D040B23897E7200B365BF /* Interface.storyboard */; };
+		C21D040F23897E7800B365BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C21D040E23897E7800B365BF /* Assets.xcassets */; };
+		C21D041623897E7800B365BF /* Batometer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C21D041523897E7800B365BF /* Batometer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C21D041B23897E7800B365BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D041A23897E7800B365BF /* ContentView.swift */; };
+		C21D041D23897E7800B365BF /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D041C23897E7800B365BF /* HostingController.swift */; };
+		C21D041F23897E7800B365BF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D041E23897E7800B365BF /* ExtensionDelegate.swift */; };
+		C21D042123897E7800B365BF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D042023897E7800B365BF /* NotificationController.swift */; };
+		C21D042323897E7800B365BF /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D042223897E7800B365BF /* NotificationView.swift */; };
+		C21D042523897E7800B365BF /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D042423897E7800B365BF /* ComplicationController.swift */; };
+		C21D042723897E7A00B365BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C21D042623897E7A00B365BF /* Assets.xcassets */; };
+		C21D042A23897E7A00B365BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C21D042923897E7A00B365BF /* Preview Assets.xcassets */; };
+		C2F2FE45238A8C7E0084773E /* SensorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F2FE44238A8C7E0084773E /* SensorManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C21D040823897E7200B365BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C21D03FC23897E7100B365BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C21D040523897E7200B365BF;
+			remoteInfo = "Batometer WatchKit App";
+		};
+		C21D041723897E7800B365BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C21D03FC23897E7100B365BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C21D041423897E7800B365BF;
+			remoteInfo = "Batometer WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C21D043223897E7A00B365BF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C21D041623897E7800B365BF /* Batometer WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C21D043623897E7A00B365BF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C21D040723897E7200B365BF /* Batometer WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C21D040223897E7100B365BF /* Batometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Batometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C21D040623897E7200B365BF /* Batometer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Batometer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C21D040C23897E7200B365BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		C21D040E23897E7800B365BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C21D041023897E7800B365BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C21D041523897E7800B365BF /* Batometer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Batometer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C21D041A23897E7800B365BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C21D041C23897E7800B365BF /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		C21D041E23897E7800B365BF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		C21D042023897E7800B365BF /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		C21D042223897E7800B365BF /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		C21D042423897E7800B365BF /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		C21D042623897E7A00B365BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C21D042923897E7A00B365BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C21D042B23897E7A00B365BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C21D042C23897E7A00B365BF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		C2F2FE44238A8C7E0084773E /* SensorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C21D041223897E7800B365BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C21D03FB23897E7100B365BF = {
+			isa = PBXGroup;
+			children = (
+				C21D040A23897E7200B365BF /* Batometer WatchKit App */,
+				C21D041923897E7800B365BF /* Batometer WatchKit Extension */,
+				C21D040323897E7100B365BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C21D040323897E7100B365BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C21D040223897E7100B365BF /* Batometer.app */,
+				C21D040623897E7200B365BF /* Batometer WatchKit App.app */,
+				C21D041523897E7800B365BF /* Batometer WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C21D040A23897E7200B365BF /* Batometer WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				C21D040B23897E7200B365BF /* Interface.storyboard */,
+				C21D040E23897E7800B365BF /* Assets.xcassets */,
+				C21D041023897E7800B365BF /* Info.plist */,
+			);
+			path = "Batometer WatchKit App";
+			sourceTree = "<group>";
+		};
+		C21D041923897E7800B365BF /* Batometer WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C21D041A23897E7800B365BF /* ContentView.swift */,
+				C21D041C23897E7800B365BF /* HostingController.swift */,
+				C21D041E23897E7800B365BF /* ExtensionDelegate.swift */,
+				C21D042023897E7800B365BF /* NotificationController.swift */,
+				C21D042223897E7800B365BF /* NotificationView.swift */,
+				C21D042423897E7800B365BF /* ComplicationController.swift */,
+				C21D042623897E7A00B365BF /* Assets.xcassets */,
+				C21D042B23897E7A00B365BF /* Info.plist */,
+				C21D042C23897E7A00B365BF /* PushNotificationPayload.apns */,
+				C21D042823897E7A00B365BF /* Preview Content */,
+				C2F2FE44238A8C7E0084773E /* SensorManager.swift */,
+			);
+			path = "Batometer WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		C21D042823897E7A00B365BF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C21D042923897E7A00B365BF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C21D040123897E7100B365BF /* Batometer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C21D043723897E7A00B365BF /* Build configuration list for PBXNativeTarget "Batometer" */;
+			buildPhases = (
+				C21D040023897E7100B365BF /* Resources */,
+				C21D043623897E7A00B365BF /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C21D040923897E7200B365BF /* PBXTargetDependency */,
+			);
+			name = Batometer;
+			productName = Batometer;
+			productReference = C21D040223897E7100B365BF /* Batometer.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		C21D040523897E7200B365BF /* Batometer WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C21D043323897E7A00B365BF /* Build configuration list for PBXNativeTarget "Batometer WatchKit App" */;
+			buildPhases = (
+				C21D040423897E7200B365BF /* Resources */,
+				C21D043223897E7A00B365BF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C21D041823897E7800B365BF /* PBXTargetDependency */,
+			);
+			name = "Batometer WatchKit App";
+			productName = "Batometer WatchKit App";
+			productReference = C21D040623897E7200B365BF /* Batometer WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C21D041423897E7800B365BF /* Batometer WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C21D042F23897E7A00B365BF /* Build configuration list for PBXNativeTarget "Batometer WatchKit Extension" */;
+			buildPhases = (
+				C21D041123897E7800B365BF /* Sources */,
+				C21D041223897E7800B365BF /* Frameworks */,
+				C21D041323897E7800B365BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Batometer WatchKit Extension";
+			productName = "Batometer WatchKit Extension";
+			productReference = C21D041523897E7800B365BF /* Batometer WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C21D03FC23897E7100B365BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = Musashinodenpa;
+				TargetAttributes = {
+					C21D040123897E7100B365BF = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					C21D040523897E7200B365BF = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					C21D041423897E7800B365BF = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = C21D03FF23897E7100B365BF /* Build configuration list for PBXProject "Batometer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C21D03FB23897E7100B365BF;
+			productRefGroup = C21D040323897E7100B365BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C21D040123897E7100B365BF /* Batometer */,
+				C21D040523897E7200B365BF /* Batometer WatchKit App */,
+				C21D041423897E7800B365BF /* Batometer WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C21D040023897E7100B365BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C21D040423897E7200B365BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21D040F23897E7800B365BF /* Assets.xcassets in Resources */,
+				C21D040D23897E7200B365BF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C21D041323897E7800B365BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21D042A23897E7A00B365BF /* Preview Assets.xcassets in Resources */,
+				C21D042723897E7A00B365BF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C21D041123897E7800B365BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21D041D23897E7800B365BF /* HostingController.swift in Sources */,
+				C21D041B23897E7800B365BF /* ContentView.swift in Sources */,
+				C2F2FE45238A8C7E0084773E /* SensorManager.swift in Sources */,
+				C21D042123897E7800B365BF /* NotificationController.swift in Sources */,
+				C21D041F23897E7800B365BF /* ExtensionDelegate.swift in Sources */,
+				C21D042323897E7800B365BF /* NotificationView.swift in Sources */,
+				C21D042523897E7800B365BF /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C21D040923897E7200B365BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C21D040523897E7200B365BF /* Batometer WatchKit App */;
+			targetProxy = C21D040823897E7200B365BF /* PBXContainerItemProxy */;
+		};
+		C21D041823897E7800B365BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C21D041423897E7800B365BF /* Batometer WatchKit Extension */;
+			targetProxy = C21D041723897E7800B365BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C21D040B23897E7200B365BF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C21D040C23897E7200B365BF /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C21D042D23897E7A00B365BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C21D042E23897E7A00B365BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C21D043023897E7A00B365BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Batometer WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = ZWX7MRL6SU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Batometer WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.musashinodenpa.Batometer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		C21D043123897E7A00B365BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Batometer WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = ZWX7MRL6SU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Batometer WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.musashinodenpa.Batometer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		C21D043423897E7A00B365BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZWX7MRL6SU;
+				IBSC_MODULE = Batometer_WatchKit_Extension;
+				INFOPLIST_FILE = "Batometer WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.musashinodenpa.Batometer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		C21D043523897E7A00B365BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZWX7MRL6SU;
+				IBSC_MODULE = Batometer_WatchKit_Extension;
+				INFOPLIST_FILE = "Batometer WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.musashinodenpa.Batometer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		C21D043823897E7A00B365BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZWX7MRL6SU;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.musashinodenpa.Batometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C21D043923897E7A00B365BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZWX7MRL6SU;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.musashinodenpa.Batometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C21D03FF23897E7100B365BF /* Build configuration list for PBXProject "Batometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C21D042D23897E7A00B365BF /* Debug */,
+				C21D042E23897E7A00B365BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C21D042F23897E7A00B365BF /* Build configuration list for PBXNativeTarget "Batometer WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C21D043023897E7A00B365BF /* Debug */,
+				C21D043123897E7A00B365BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C21D043323897E7A00B365BF /* Build configuration list for PBXNativeTarget "Batometer WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C21D043423897E7A00B365BF /* Debug */,
+				C21D043523897E7A00B365BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C21D043723897E7A00B365BF /* Build configuration list for PBXNativeTarget "Batometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C21D043823897E7A00B365BF /* Debug */,
+				C21D043923897E7A00B365BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C21D03FC23897E7100B365BF /* Project object */;
+}
